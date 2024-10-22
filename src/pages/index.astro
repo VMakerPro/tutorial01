@@ -1,26 +1,8 @@
 ---
-const pageTitle = "Inicio";
-import "../styles/global.css";
-import CMenuNavegacion from "../components/MenuNavegacion.astro";
-import CFooter from "../components/Footer.astro";
-import CHeader from "../components/Header.astro";
+const pageTitle = "Página de  Inicioxxx";
+import PlantillaBase from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
-  </head>
-  <body>
-    <CHeader />
-    <h1>{pageTitle}</h1>
-    <CFooter />
-	
-    <script>
-      import "../scripts/menu"
-    </script>
-  </body>
-</html>
+<PlantillaBase pageTitle={pageTitle}>
+  <h2>Mi impresionante subtítulo de archivo index.astro</h2>
+</PlantillaBase>

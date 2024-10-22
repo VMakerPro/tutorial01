@@ -1,0 +1,21 @@
+---
+import PlantillaBase from "../layouts/BaseLayout.astro";
+const { frontmatter } = Astro.props;
+---
+
+<PlantillaBase pageTitle={frontmatter.title} <h1
+  >{frontmatter.title}
+  <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
+  <p><em>{frontmatter.description}</em></p>
+  <p>Escrito por: {frontmatter.author}</p>
+  <div class="confondo">
+    <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
+  </div>
+
+  <style>
+    .confondo {
+      background-color: black;
+    }
+  </style>
+  <slot />
+</PlantillaBase>

@@ -1,0 +1,31 @@
+---
+import "../styles/global.css";
+import CMenuNavegacion from "../components/MenuNavegacion.astro";
+import CFooter from "../components/Footer.astro";
+const { pageTitle } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <CMenuNavegacion />
+    <h1>Mi blog de apendizaje Astro</h1>
+    <slot />
+    <p>Aquí es donde publicaré sobre mi viaje de aprendizaje Astro.</p>
+    <ul>
+      <li><a href="/posts/post-01">Publicación 1</a></li>
+      <li><a href="/posts/post-02">Publicación 2</a></li>
+      <li><a href="/posts/post-03">Publicación 3</a></li>
+    </ul>
+    <CFooter />
+    <script>
+      import "../scripts/menu.js";
+    </script>
+  </body>
+</html>
